@@ -11,4 +11,4 @@ The program will import `ndarray` as an swift array. The original `ndarray` will
 let result : [Float] = npy2array("test.npy", sample: Float(0))
 ```
 
-The provided `test.npy` contains 96*3*3*3 elements, and all the elements are 29.
+The provided `test.npy` contains 96x3x3x3 elements, and all the elements are 29. The function requires a `sample` parameter as the initializer for the returned array. This is just a workaround for generic syntax.
