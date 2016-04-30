@@ -10,27 +10,12 @@ import XCTest
 @testable import npy2swift
 
 class npy2swiftTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+  // Load the test .npy file. The provided test contains 96*3*3*3 elements, all of which are 29
+  func testExample() {
+    let result : [Float] = npy2array("test.npy", sample: Float(0))
+    for r in result {
+      XCTAssertEqual(r, 29)
     }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
+    XCTAssertEqual(result.count, 96*3*3*3)
+  }
 }

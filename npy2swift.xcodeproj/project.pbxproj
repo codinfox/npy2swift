@@ -10,6 +10,7 @@
 		B55D64E41CD47B3400BB268A /* npy2swift.h in Headers */ = {isa = PBXBuildFile; fileRef = B55D64E31CD47B3400BB268A /* npy2swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B55D64EB1CD47B3400BB268A /* npy2swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B55D64E01CD47B3400BB268A /* npy2swift.framework */; };
 		B55D64F01CD47B3400BB268A /* npy2swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55D64EF1CD47B3400BB268A /* npy2swiftTests.swift */; };
+		B55D64FB1CD47B4500BB268A /* npy2swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55D64FA1CD47B4500BB268A /* npy2swift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		B55D64EA1CD47B3400BB268A /* npy2swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = npy2swiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55D64EF1CD47B3400BB268A /* npy2swiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = npy2swiftTests.swift; sourceTree = "<group>"; };
 		B55D64F11CD47B3400BB268A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B55D64FA1CD47B4500BB268A /* npy2swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = npy2swift.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				B55D64E31CD47B3400BB268A /* npy2swift.h */,
 				B55D64E51CD47B3400BB268A /* Info.plist */,
+				B55D64FA1CD47B4500BB268A /* npy2swift.swift */,
 			);
 			path = npy2swift;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B55D64FB1CD47B4500BB268A /* npy2swift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +311,7 @@
 		B55D64F51CD47B3400BB268A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -319,12 +324,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = edu.cmu.npy2swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		B55D64F61CD47B3400BB268A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -381,6 +388,7 @@
 				B55D64F61CD47B3400BB268A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B55D64F71CD47B3400BB268A /* Build configuration list for PBXNativeTarget "npy2swiftTests" */ = {
 			isa = XCConfigurationList;
@@ -389,6 +397,7 @@
 				B55D64F91CD47B3400BB268A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
